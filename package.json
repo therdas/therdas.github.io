@@ -1,0 +1,42 @@
+{
+  "name": "therdas.github.io",
+  "version": "0.0.1",
+  "description": "therdas's personal website",
+  "main": "index.js",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "webpack --mode=production",
+    "test": "webpack serve --mode development --env development"
+  },
+  "keywords": [
+    "website",
+    "typescript",
+    "vsc"
+  ],
+  "author": "therdas",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.17.5",
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+    "@babel/preset-typescript": "^7.16.7",
+    "@webdiscus/pug-loader": "^1.7.4",
+    "css-loader": "^6.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.49.8",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.5.5",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "babel-loader": "^8.2.3"
+  }
+}
