@@ -7,7 +7,7 @@ module.exports = {
     target: 'web',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'build')
+        path: path.resolve(__dirname, 'docs')
     },
 
     resolve: {
@@ -19,7 +19,7 @@ module.exports = {
         host: "localhost",
         port: 8000,
         static: {
-            directory: path.resolve(__dirname, 'build'),
+            directory: path.resolve(__dirname, 'docs'),
             watch: true,
         },
         watchFiles:[path.join(__dirname, './**/*')]
