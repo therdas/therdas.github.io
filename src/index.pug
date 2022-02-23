@@ -1,7 +1,25 @@
 doctype html 
-
+include mixins/logo
 html(lang="en")
     head 
-        title='therdases personal site'
+        title therdas :: welcome!
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap")
     body 
-        h1 sadsad
+        #logo-main 
+            +logo
+        #typewrite-text 
+            - text= "hello! i'm a student,\nprogrammer, and developer.\ni love to build new, novel\nand polished experiences."
+            span.ghost-container
+                span.ghost=text
+            span.type-container 
+                span.typed=text
+                span.cursor
+        #links 
+            - links = ["projects", "writings", "dribbble", "career", "contact me"]
+            for elem in links 
+                h3.nav-link
+                    a(href='#'+elem) #{elem}
+            
+    

@@ -1,2 +1,85 @@
+$text-color: rgba(100%, 100%, 100%, 0.9)
+$background-color: rgba(4, 4, 3, 0.93)
+
+html
+    background-color: $background-color
+    display: flex
+    justify-content: center
+    color: $text-color
+    font-family: 'Fira Mono', 'Inconsolata', Courier New, Courier, monospace
+
 body
-    background-color: red
+    width: 60%
+    margin-top: 10em
+
+    .logo
+        display: block
+        width: 8em
+        height: 8em
+        position: relative
+        border: 3px solid white
+        margin-left: -1.5em
+
+        .inner-text
+            position: absolute
+            bottom: 0.25em
+            left: 0.25em
+            font-size: 3em
+
+#typewrite-text
+    position: relative
+    padding-top: 2em
+    display: block
+    min-height: 8em
+
+    .ghost-container, .type-container
+        display: block
+        width: 16em
+        span
+            white-space: pre
+
+    .ghost-container
+        position: fixed
+        display: block
+        color: white
+        opacity: 0.2
+        margin-top: 0em
+
+    .typed
+        .cursor
+            display: inline-block
+            content: ''
+            width: 0.5em
+            height: 0.8em
+            background-color: $text-color
+
+            @keyframes blink
+                from, to
+                    opacity: 0
+                20%
+                    opacity: 100%
+
+            animation: 1s blink step-end infinite
+    
+#links
+    .nav-link 
+        a
+            text-decoration: none
+            color: $text-color
+            font-size: 1em
+            font-weight: normal
+            transition: all 0.2s ease-in-out
+
+            &::before
+                content: ''
+                display: inline-block
+                width: 0
+                height: 0.6em
+                transition: all 0.2s ease-in-out
+
+            &:hover
+                &::before
+                    width: 0.5em
+                    background-color: $text-color
+                    margin-right: 1em
+
